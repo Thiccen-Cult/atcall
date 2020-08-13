@@ -32,6 +32,9 @@ WHILE (cell) (IS | > | < | >= | <= | !=) (value) (function name to execute)
 PASS (no arguments, does nothing)
 CALL (functions name to execute)
 ```
+
+`RDINT` will return `10` on invalid input as you can only input 0-9 so it made sense to do so. <br>
+
 <br>
 
 atcall will automaticaly run the `MAIN` function. You need to use `--NEW--` when defining a new function. <br>
