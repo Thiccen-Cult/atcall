@@ -1,6 +1,9 @@
 # atcall
 An esoteric "programming language" written in 20 minutes with python 3. <br>
 If you are using windows please change `self.os` in `main.py` to `"windows"`. <br>
+
+Please see the folder `examples` for examples. <br>
+
 <h1> Information </h1>
 atcall has quite a few instructions. <br>
 
