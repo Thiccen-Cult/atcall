@@ -5,6 +5,8 @@ If you are using windows please change `self.os` in `main.py` to `"windows"`. <b
 
 Please see the folder `examples` for examples. <br>
 
+By [https://github.com/Polarzz/!](Polarz) <br>
+
 <h1> Information </h1>
 atcall has quite a few instructions. <br>
 
