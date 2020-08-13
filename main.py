@@ -161,7 +161,7 @@ class Main():
 									while self.values[int(self.funcs[i][loop+1])] != int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 							except Exception as e:
-								print(e)
+								#print(e)
 								print("error")
 						elif t == self.if_:
 							try:
