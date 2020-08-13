@@ -62,4 +62,6 @@ FUNCTION MAIN
   CALL PRINT_NEW_LINE
  ```
  
+ Both of these programs will print an empty (new) line. <br>
+ 
 
