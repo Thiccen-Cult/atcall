@@ -7,6 +7,10 @@ Please see the folder `examples` for examples. <br>
 
 By [Polarz](https://github.com/Polarzz/) <br>
 
+Usage `<your systems python command> main.py <path/to/file/to/run.py>` <br>
+
+Does not have proper error handling of any sort, wasn't meant to be good, was created in 20 minutes. <br>
+
 <h1> Information </h1>
 atcall has quite a few instructions. <br>
 
