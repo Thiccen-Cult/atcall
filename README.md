@@ -33,7 +33,7 @@ PASS (no arguments, does nothing)
 CALL (functions name to execute)
 ```
 
-`RDINT` will return `10` on invalid input as you can only input 0-9 so it made sense to do so. <br>
+`RDINT` will return `10` on invalid input as you can only input 0-9 so it made sense to make it return a value that could not be entered. <br>
 
 <br>
 
