@@ -223,7 +223,7 @@ class Main():
 							except Exception as e:
 								#raise
 								#print(e)
-								self.values[self.cell] = 0
+								self.values[self.cell] = 10
 						elif t == "pass":
 							pass
 						elif t == self.reset:
