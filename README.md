@@ -23,7 +23,9 @@ PASS (no arguments, does nothing)
 CALL (functions name to execute)
 ```
 <br>
+
 atcall will automaticaly run the `MAIN` function. You need to use `--NEW--` when defining a new function. <br>
+
 e.g
 
 ```hs
