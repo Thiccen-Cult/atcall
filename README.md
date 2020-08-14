@@ -1,4 +1,7 @@
 # atcall
+
+Please see https://en.wikipedia.org/wiki/Esoteric_programming_language on information on what an esoteric programming language (esolang) is if you did not already know.
+
 An esoteric "programming language" written in 20 minutes with python 3. <br>
 
 If you are using windows please change `self.os` in `main.py` to `"windows"`. <br>
