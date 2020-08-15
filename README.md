@@ -34,6 +34,7 @@ IF (cell) (IS | > | < | >= | <= | != ) (value) (function name to execute if) (fu
 WHILE (cell) (IS | > | < | >= | <= | !=) (value) (function name to execute)
 PASS (no arguments, does nothing)
 CALL (functions name to execute)
+INCL (file name without extension to include)
 ```
 
 `RDINT` will return `10` on invalid input as you can only input 0-9 so it made sense to make it return a value that could not be entered. <br>
@@ -64,4 +65,39 @@ FUNCTION MAIN
  
  Both of these programs will print an empty (new) line. <br>
  
+ Import example: <br>
+ import.actl
+ 
+ ```hs
+ FUNCTION MAIN
+  SET 10
+  PRINT
+  ```
+  
+  main.actl<br>
+  
+  ```hs
+  FUNCTION MAIN
+    INCL import
+ ```
+ 
+ This will call the main function from `import.actl` as if it were it were `main.actl`'s main function. <br>
+ If you have functions in another and include that file, all functions would be imported as if they were defined in your main file. <br>
+ Example: <br>
+ import.actl <br>
+ 
+ ```hs
+ FUNCTION PRINT_NEW_LINE
+  SET 10
+  PRINT
+  ```
+  
+  main.actl <br>
+  
+  ```hs
+  FUNCTION MAIN
+    INCL import
+    CALL PRINT_NEW_LINE
+```
 
+This will print a newline <br>
