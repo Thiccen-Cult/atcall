@@ -30,18 +30,32 @@ class Main():
 		self.values = values
 		self.funcs = funcs
 		self.os = "unix" # change to "windows" for windows	
+		self.import_ = "incl"
 	def function(self,text):
 		try:
 			text = text.lower()
 			cont = text.split(self.func)
+			cont2 = text.split()
 			for i in cont:
 				t = i
 				i = i.split()
 				if len(i) > 0:
 					self.funcs[i[0]] = i[1:]
+			loop = -1
+			for i in cont2:
+				loop += 1
+				#print(i)
+				if i == self.import_:
+					try:
+						self.function(open(cont2[loop+1].lower()+".actl","r").read())
+					except Exception as e:
+						print(e)
+						print("Failed to import ''. Does it exist?")
+
 			#print(self.funcs)
 		except:
 			pass
+			#print(e)
 		#print(self.funcs)
 
 	def parse(self,x="main"):
@@ -228,8 +242,6 @@ class Main():
 							pass
 						elif t == self.reset:
 							self.values[self.cell] = 0
-
-
 					#print(self.cell,self.values)
 
 
