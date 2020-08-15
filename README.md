@@ -73,28 +73,28 @@ FUNCTION MAIN
   SET 10
   PRINT
   ```
+
+main.actl<br>
   
-  main.actl<br>
-  
-  ```hs
-  FUNCTION MAIN
-    INCL import
- ```
+```hs
+FUNCTION MAIN
+  INCL import
+```
  
- This will call the main function from `import.actl` as if it were it were `main.actl`'s main function. <br>
- If you have functions in another and include that file, all functions would be imported as if they were defined in your main file. <br>
- Example: <br>
- import.actl <br>
+This will call the main function from `import.actl` as if it were it were `main.actl`'s main function. <br>
+If you have functions in another and include that file, all functions would be imported as if they were defined in your main file. <br>
+Example: <br>
+import.actl <br>
  
  ```hs
  FUNCTION PRINT_NEW_LINE
   SET 10
   PRINT
-  ```
+```
   
-  main.actl <br>
-  
-  ```hs
+main.actl <br>
+
+```hs
   FUNCTION MAIN
     INCL import
     CALL PRINT_NEW_LINE
