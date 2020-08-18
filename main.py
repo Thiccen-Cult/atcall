@@ -26,6 +26,7 @@ class Main():
 		self.debug = "val"
 		self.readInt = "rdint"
 		self.nl =","
+		self.add = "add"
 		self.cell = cell
 		self.values = values
 		self.funcs = funcs
@@ -242,10 +243,18 @@ class Main():
 							pass
 						elif t == self.reset:
 							self.values[self.cell] = 0
+						elif t == self.add:
+							try:
+								self.values[self.cell] += self.values[int(self.funcs[i][loop+1])]
+							except KeyError:
+								self.values[self.cell] = self.values[int(self.funcs[i][loop+1])]
+							except ValueError:
+								print(f"{t.upper()} {self.funcs[i][loop+1]}")
+								errors.Error().notIntErr()
 					#print(self.cell,self.values)
 
 
-						#print(self.cell)
+						#print(self.values)
 		except Exception as e:
 			raise
 			#print(e)
