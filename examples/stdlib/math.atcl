@@ -1,0 +1,9 @@
+FUNCTION SQUARE
+    " will square the current cell "
+    MULCELL ?   
+
+FUNCTION CUBE
+    " super long cell number so that it hopefully doesnt override any user cells"
+    CP ? 1010101010101010
+    MULCELL ?
+    MULCELL 1010101010101010
