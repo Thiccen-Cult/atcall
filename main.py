@@ -1,4 +1,4 @@
-import errors, sys
+import errors, sys, os
 cell = 0
 funcs = {}
 values = {}
@@ -48,7 +48,8 @@ class Main():
 				#print(i)
 				if i == self.import_:
 					try:
-						self.function(open(cont2[loop+1].lower()+".actl","r").read())
+						#print(os.getcwd())
+						self.function(open((os.path.join(os.getcwd(),cont2[loop+1].lower()+".atcl")),"r").read())
 					except Exception as e:
 						print(e)
 						print("Failed to import ''. Does it exist?")
