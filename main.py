@@ -63,13 +63,19 @@ class Main():
 	def parse(self,x="main"):
 		try:
 			loop = -1
+
 			for i in self.funcs:
 				if i == x:
 					#self.funcs[i] = ' '.join(self.funcs[i]).split(";")[0].split()
 					#print(self.funcs[i])
 					for t in self.funcs[i]:
 						loop += 1
-						#print(t)
+						#print(t) 
+						try:
+							if self.funcs[i][loop+1] == "?":
+								self.funcs[i][loop+1] = self.cell
+						except:
+							pass
 						if t == self.move:
 							try:
 								self.cell = int(self.funcs[i][loop+1])
@@ -252,6 +258,28 @@ class Main():
 							except ValueError:
 								print(f"{t.upper()} {self.funcs[i][loop+1]}")
 								errors.Error().notIntErr()
+						elif t == "mulcell":
+							try:
+								self.values[self.cell] *= int(self.values[int(self.funcs[i][loop+1])])
+							except KeyError:
+								#print("p")
+								self.values[self.cell] = 0
+							except ValueError:
+								print(f"{t.upper()} {self.funcs[i][loop+1]}")
+								errors.Error().notIntErr()
+
+						elif t == "divcell":
+							try:
+								self.values[self.cell] = int(self.values[self.cell] / int(self.values[int(self.funcs[i][loop+1])]))
+							except KeyError:
+								#print("p")
+								self.values[self.cell] = 0
+							except ValueError:
+								print(f"{t.upper()} {self.funcs[i][loop+1]}")
+								errors.Error().notIntErr()
+							#except:
+								#raise
+
 					#print(self.cell,self.values)
 
 
