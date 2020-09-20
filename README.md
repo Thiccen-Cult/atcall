@@ -2,7 +2,7 @@
 
 Please see https://en.wikipedia.org/wiki/Esoteric_programming_language on information on what an esoteric programming language (esolang) is if you did not already know. <br>
 
-> Note: the only whitespace required is that between an instruction and its argument.
+> Note: the only whitespace required is that between an instruction and its argument and atcall is not require uppercase to be used.
 
 An esoteric "programming language" written in 20 minutes with python 3. <br>
 
