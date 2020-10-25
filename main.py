@@ -279,7 +279,22 @@ class Main():
 								errors.Error().notIntErr()
 							#except:
 								#raise
-
+						else:
+							try:
+								x = __import__(f"plugins.{t}", fromlist=[f'{t}'])
+								try:
+									#print()
+									ret = x.main(self.funcs[i][loop+1:x.ARGUMENTS+3], self.values, self.cell)
+									self.values = ret["cells"]
+									self.cell = ret["position"]
+								except TypeError as e:
+									#print(e)
+									ret = x.main(self.values, self.cell)
+									self.values = ret["cells"]
+									self.cell = ret["position"]
+							except Exception as e:
+								pass
+								#print(e)
 					#print(self.cell,self.values)
 
 
