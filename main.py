@@ -167,19 +167,19 @@ class Main():
 								if x == self.is_:
 									while self.values[int(self.funcs[i][loop+1])] == int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
-								if x == ">":
+								elif x == ">":
 									while self.values[int(self.funcs[i][loop+1])] > int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
-								if x == ">=":
+								elif x == ">=":
 									while self.values[int(self.funcs[i][loop+1])] >= int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
-								if x == "<":
+								elif x == "<":
 									while self.values[int(self.funcs[i][loop+1])] < int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
-								if x == "<=":
+								elif x == "<=":
 									while self.values[int(self.funcs[i][loop+1])] <= int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
-								if x == "!=":
+								elif x == "!=":
 									while self.values[int(self.funcs[i][loop+1])] != int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 							except Exception as e:
@@ -194,28 +194,28 @@ class Main():
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
 										Main().parse(x=self.funcs[i][loop+5])
-								if x == ">":
+								elif x == ">":
 									if self.values[int(self.funcs[i][loop+1])] > int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
 										Main().parse(x=self.funcs[i][loop+5])
-								if x == ">=":
+								elif x == ">=":
 									if self.values[int(self.funcs[i][loop+1])] >= int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
 										Main().parse(x=self.funcs[i][loop+5])
-								if x == "<":
+								elif x == "<":
 									if self.values[int(self.funcs[i][loop+1])] < int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
 										Main().parse(x=self.funcs[i][loop+5])
-								if x == "<=":
+								elif x == "<=":
 									if self.values[int(self.funcs[i][loop+1])] <= int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
 										Main().parse(x=self.funcs[i][loop+5])
 
-								if x == "!=":
+								elif x == "!=":
 									if self.values[int(self.funcs[i][loop+1])] != int(self.funcs[i][loop+3]):
 										Main().parse(x=self.funcs[i][loop+4])
 									else:
@@ -284,7 +284,7 @@ class Main():
 								x = __import__(f"plugins.{t}", fromlist=[f'{t}'])
 								try:
 									#print()
-									ret = x.main(self.funcs[i][loop+1:x.ARGUMENTS+3], self.values, self.cell)
+									ret = x.main(self.funcs[i][loop+1:x.ARGUMENTS+4], self.values, self.cell)
 									self.values = ret["cells"]
 									self.cell = ret["position"]
 								except TypeError as e:
