@@ -1,7 +1,7 @@
 > Plugins
 Plugins allow you to add new builtin "functions" and you can have as many arguments passed to them as you want. <br>
 <br>
-A basic plugin has been placed in the `examples` directory. We will look at this.
+A basic plugin has been placed in the `examples` directory. We will look at this. <br>
 
 ```py
 
