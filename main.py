@@ -284,10 +284,10 @@ class Main():
 								x = __import__(f"plugins.{t}", fromlist=[f'{t}'])
 								try:
 									#print()
-									ret = x.main(self.funcs[i][loop+1:x.ARGUMENTS+4], self.values, self.cell)
+									ret = x.main(self.funcs[i][loop+1:loop+1+x.ARGUMENTS], self.values, self.cell)
 									self.values = ret["cells"]
 									self.cell = ret["position"]
-								except TypeError as e:
+								except (TypeError, AttributeError) as e:
 									#print(e)
 									ret = x.main(self.values, self.cell)
 									self.values = ret["cells"]
