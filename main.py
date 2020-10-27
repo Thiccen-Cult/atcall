@@ -74,6 +74,8 @@ class Main():
 						try:
 							if self.funcs[i][loop+1] == "?":
 								self.funcs[i][loop+1] = self.cell
+							elif self.funcs[i][loop+1] == "!":
+								self.funcs[i][loop+1] = self.values[self.cell]
 						except:
 							pass
 						if t == self.move:
