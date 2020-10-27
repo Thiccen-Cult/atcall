@@ -42,6 +42,19 @@ MULCELL (cell number) (multiplies current cell by another)
 DIVCELL (cell number) (divides current cell by another)
 ```
 
+IF you want to pass the current cells value to one of these instructions you can use `!`.
+
+```hs
+FUNCTION MAIN
+  SET 10
+  MUL !
+  VAL
+```
+
+Output: 100 <br>
+
+There is also a `?` placeholder which contains the current position within the cells. <br>
+
 `RDINT` will return `10` on invalid input as you can only input 0-9 so it made sense to make it return a value that could not be entered. <br>
 
 <br>
