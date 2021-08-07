@@ -1,0 +1,8 @@
+FUNCTION MAIN
+    INCL stdlib/math
+    INCL stdlib/io
+    MOVE 0
+    RDINT
+    CALL SQUARE
+    VAL
+    CALL PRINT_NL
