@@ -6,6 +6,10 @@ Please see https://en.wikipedia.org/wiki/Esoteric_programming_language on inform
 
 <br>
 
+> Note: Updated, Now more modular.
+
+<br>
+
 > Note: The ? and ! placeholders have only been implemented in the old version of atcall in old/
 
 <br>
